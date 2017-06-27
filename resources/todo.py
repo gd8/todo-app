@@ -44,7 +44,7 @@ class Todo(Resource):
         try:
             result = db.modify(statement)
         except:
-            return {'message': 'failed to insert item into DB'}, 500
+            return {'message': 'failed to update item in DB'}, 500
 
         return {'message': 'Todo item successfully updated.'}, 200
 
@@ -62,6 +62,6 @@ class Todo(Resource):
         try:
             result = db.modify(statement)
         except:
-            return {'message': 'failed to insert item into DB'}, 500
+            return {'message': 'failed to delete item from DB'}, 500
 
         return {'message': 'Todo item successfully deleted.'}, 200
